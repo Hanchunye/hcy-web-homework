@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>定位展示知识点视图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .center-icon {
+            width: 250px;
+            height: 150px;
+            background: url("https://cdn-icons-png.flaticon.com/512/919/919796.png") no-repeat center/cover;
+            position: relative; 
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10; 
+            border-radius: 50%;
+            box-shadow: 0 0 10px #333;
+        }
+        .box {
+            width: 260px;
+            padding: 15px;
+            background-color: #999;
+            color: #fff;
+            position: absolute;
+            border-radius: 5px;
+        }
+        .box h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: left;
+        }
+        .box ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .box ul li {
+            font-size: 13px;
+            margin: 4px 0;
+            list-style-type: circle;
+        }
+        .box1 {
+            top: 50px;
+            left: 150px;
+            z-index: 1;
+        }
+        .box2 {
+            bottom: 80px;
+            left: 80px;
+            z-index: 1;
+        }
+        .box3 {
+            bottom: 80px;
+            right: 80px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">
+            <h3>HTML基础和HTML5</h3>
+            <ul>
+                <li>HTML标签与属性</li>
+                <li>HTML5多媒体（视频和音频）</li>
+                <li>HTML5图像标签（画布和SVG）</li>
+                <li>HTML5地理定位</li>
+                <li>HTML5表单</li>
+            </ul>
+        </div>
+        <div class="box box2">
+            <h3>CSS基础和CSS3</h3>
+            <ul>
+                <li>CSS选择器</li>
+                <li>CSS样式</li>
+                <li>CSS盒模型与定位</li>
+                <li>CSS3的2D与3D转换</li>
+                <li>CSS3的过渡与动画</li>
+                <li>CSS3新的边框效果</li>
+            </ul>
+        </div>
+        <div class="box box3">
+            <h3>JavaScript</h3>
+            <ul>
+                <li>数据类型</li>
+                <li>运算符</li>
+                <li>基础算法</li>
+                <li>BOM对象</li>
+                <li>DOM对象</li>
+                <li>JS特效</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
