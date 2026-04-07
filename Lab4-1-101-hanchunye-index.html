@@ -2,104 +2,139 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>定位展示知识点视图</title>
+    <title>太空探索新闻资讯</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "微软雅黑", sans-serif;
+            font-family: "Microsoft Yahei", sans-serif;
         }
-        .container {
+        body {
+            padding: 20px;
+        }
+        .news-container {
             width: 800px;
-            height: 600px;
-            margin: 50px auto;
-            position: relative;
+            margin: 0 auto;
         }
-        .center-icon {
-            width: 250px;
-            height: 150px;
-            background: url("https://cdn-icons-png.flaticon.com/512/919/919796.png") no-repeat center/cover;
-            position: relative; 
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10; 
-            border-radius: 50%;
-            box-shadow: 0 0 10px #333;
-        }
-        .box {
-            width: 260px;
-            padding: 15px;
-            background-color: #999;
-            color: #fff;
-            position: absolute;
-            border-radius: 5px;
-        }
-        .box h3 {
+        .breadcrumb {
+            font-size: 14px;
+            color: #666;
             margin-bottom: 10px;
-            font-size: 16px;
-            text-align: left;
         }
-        .box ul {
-            list-style-type: none;
-            padding-left: 20px;
+        .breadcrumb a {
+            color: #337ab7;
+            text-decoration: none;
         }
-        .box ul li {
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 15px 0;
+        }
+        .content-wrapper {
+            display: flex;
+            gap: 20px;
+        }
+        .main-news {
+            flex: 2;
+        }
+        .news-item {
+            margin-bottom: 15px;
+        }
+        .news-item h4 {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .news-img-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+        .news-img-group img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+        }
+        .news-author {
+            font-size: 12px;
+            color: #999;
+        }
+        .hot-news {
+            flex: 1;
+        }
+        .hot-news h4 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        .hot-item {
+            margin-bottom: 12px;
+        }
+        .hot-item a {
+            display: block;
             font-size: 13px;
-            margin: 4px 0;
-            list-style-type: circle;
+            color: #337ab7;
+            text-decoration: none;
+            margin-bottom: 5px;
         }
-        .box1 {
-            top: 50px;
-            left: 150px;
-            z-index: 1;
-        }
-        .box2 {
-            bottom: 80px;
-            left: 80px;
-            z-index: 1;
-        }
-        .box3 {
-            bottom: 80px;
-            right: 80px;
-            z-index: 1;
+        .hot-item img {
+            width: 95%;
+            height: 115px;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box box1">
-            <h3>HTML基础和HTML5</h3>
-            <ul>
-                <li>HTML标签与属性</li>
-                <li>HTML5多媒体（视频和音频）</li>
-                <li>HTML5图像标签（画布和SVG）</li>
-                <li>HTML5地理定位</li>
-                <li>HTML5表单</li>
-            </ul>
+    <div class="news-container">
+        <div class="breadcrumb">
+            <a href="#">频道>科技>太空探索</a>
         </div>
-        <div class="box box2">
-            <h3>CSS基础和CSS3</h3>
-            <ul>
-                <li>CSS选择器</li>
-                <li>CSS样式</li>
-                <li>CSS盒模型与定位</li>
-                <li>CSS3的2D与3D转换</li>
-                <li>CSS3的过渡与动画</li>
-                <li>CSS3新的边框效果</li>
-            </ul>
-        </div>
-        <div class="box box3">
-            <h3>JavaScript</h3>
-            <ul>
-                <li>数据类型</li>
-                <li>运算符</li>
-                <li>基础算法</li>
-                <li>BOM对象</li>
-                <li>DOM对象</li>
-                <li>JS特效</li>
-            </ul>
+        <hr>
+        <div class="content-wrapper">
+            <div class="main-news">
+                <div class="news-item">
+                    <h4>飞行了200多亿公里的旅行者1号，为何不会撞上太空中的小行星</h4>
+                    <div class="news-img-group">
+                        <img src="image/tu1.webp" alt="旅行者1号">
+                        <img src="image/tu2.jpg" alt="太空景象">
+                    </div>
+                    <p class="news-author">科学探秘 10分钟前 · 来自北京</p>
+                </div>
+                <div class="news-item">
+                    <h4>欧洲探测器从4亿公里外传回多张照片</h4>
+                    <div class="news-img-group">
+                        <img src="image/tu3.jpg" alt="探测器照片">
+                        <img src="image/tu4.webp" alt="星球特写">
+                    </div>
+                    <p class="news-author">天文在线 5分钟前 · 来自上海</p>
+                </div>
+                <div class="news-item">
+                    <h4>为什么太空没有氧气，陨石仍然能够燃烧</h4>
+                    <div class="news-img-group">
+                        <img src="image/tu5.webp" alt="陨石燃烧">
+                        <img src="image/tu6.jpg" alt="陨石特写">
+                    </div>
+                    <p class="news-author">宇宙科普 3分钟前 · 来自广州</p>
+                </div>
+            </div>
+            <div class="hot-news">
+                <h4>热文推荐</h4>
+                <div class="hot-item">
+                    <a href="#">研究表明：人类的自然寿命为120岁</a>
+                    <img src="image/tu7.jpg" alt="人类寿命研究">
+                </div>
+                <div class="hot-item">
+                    <a href">白矮星了不用重新算，一个冷门，现象一经，立马干净刷新</a>
+                    <img src="image/tu8.jpg" alt="白矮星">
+                </div>
+                <div class="hot-item">
+                    <a href="#">俗语“八月十二三更，四季无收成”，一定是真的吗</a>
+                    <img src="image/tu9.jpg" alt="乡村景象">
+                </div>
+            </div>
         </div>
     </div>
 </body>
